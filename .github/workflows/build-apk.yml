@@ -21,8 +21,8 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Build web app
-        run: npm run build
+      - name: Install TypeScript
+        run: npm install --save-dev typescript
 
       - name: Add Android
         run: npx cap add android
