@@ -2,7 +2,8 @@ name: Build TERNAKPRO APK
 
 on:
   push:
-    branches: [main]
+    branches:
+      - main
   workflow_dispatch:
 
 jobs:
@@ -21,8 +22,8 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Install TypeScript
-        run: npm install --save-dev typescript
+      - name: Build web app
+        run: npm run build
 
       - name: Add Android
         run: npx cap add android
